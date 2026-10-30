@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Big+Shoulders:opsz,wght@10..72,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contanier {
+    background: linear-gradient(90deg, #b7b78a 50%, #3c6255 50%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background-color: #dddddd;
+    width: 90%;
+    height: 90vh;  
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    height: 15vh;
+}
+
+
+.navbar .logo {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 3px solid #3c6255;
+    border-radius: 50%;
+    border-right-color: transparent;
+    position: relative;
+}
+
+
+.navbar .logo::before {
+    content: "Shopify";
+    color: black;
+    font-size: 35px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    font-family: "Arizonia", cursive;
+}
+
+
+.navlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navlist li {
+    list-style: none;
+    padding: 20px;
+}
+
+
+.navlist a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    position:relative;
+}
+
+.navlist a::before {
+    content: "";
+    position:absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: .3s ease-in-out;
+}
+
+.navlist a:hover::before {
+    width: 100%;
+}
+
+/*---------------------------*/
+
+/*---------------------------*/
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.hero img {
+    width: 45vw;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 4px solid #3c6255;
+    padding: 20px 50px;
+}
+
+.content h3 {
+    color: rgb(73 ,73 ,73);
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+
+.content h1 {
+    color: #3c6255;
+    font-size: 50px;
+}
+
+
+.content p {
+    color: black;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+
+.content button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: #3c6255;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.content button:hover {
+    background-color: white;
+    color: #3c6255;
+}
+
+.btnav {
+    display: none;
+}
+
+
+.btnav span {
+    width: 15px;
+    height: 3px;
+    background-color: black;
+    display: block;
+    margin: 5px;
+}
+
+
+.btnav span:nth-child(2){
+    width: 30px;
+}
+
+
+
+
+/*------------------------*/
+
+/*------------------------*/
+
+
+@media screen and (max-width:1207px) {
+    .content h1 {
+        font-size: 45px;
+    }
+
+     .content p {
+        font-size: 17px;
+        line-height: 15px;
+    }
+
+}
+
+
+@media screen and (max-width:1110px){
+    .content {
+        padding: 0 40px;
+        gap: 10px;
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+}
+
+
+
+
+@media screen and (max-width:796px){
+
+    .box {
+        position:relative;
+        overflow: hidden;
+    }
+
+    .navlist{
+        position:absolute;
+        flex-direction: column;
+        top: 0;
+        right: -100%;
+        background-color: #b7b78a;
+        width: 300px;
+        height: 100vh;
+        justify-content: center;
+        transition: .3s ease-in-out;
+    }
+
+    .navlist-active {
+        right: 0;
+    }
+
+    .btnav {
+        display: block;
+        z-index: 5;
+    }
+
+    .hero img {
+        display: none;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    .content p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .content  {
+        padding: 20px 50px;
+        gap: 15px;
+    }
+
+
+
+}
